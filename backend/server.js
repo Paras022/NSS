@@ -19,7 +19,7 @@ app.use(cors())
 connectDB();
 
 // API endpoints
-app.use("api/food" ,foodRouter)
+app.use("/api/food" ,foodRouter)
 app.use("/images" ,express.static('uploads')) // mounted the folder uploads on endpoint /images 
                                             //  we can acess the files of uploads now as /images/file_name
 app.use("/api/user" ,userRouter)
