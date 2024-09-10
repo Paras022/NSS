@@ -32,6 +32,7 @@ const listFood = async(req,res) =>{
         res.json({success:true ,data:foods})
     }catch(error){
         console.log(error);
+        console.log("api here");
         res.json({success:false ,message:"error"})
     }
 }
