@@ -5,7 +5,7 @@ export const StoreContext = createContext(null)
 const storeContextProvider = (props) => {
 
     const [cartItems ,setCartItems ] = useState({});
-    const url = "https://sharmasweets-backend.onrender.com/"
+    const url = "https://sharmasweets-backend.onrender.com"
     const [token ,setToken] = useState("")
     const [food_list ,setFoodList] = useState([]);
 
@@ -55,7 +55,7 @@ const storeContextProvider = (props) => {
      }
 
      const fetchFoodList = async () =>{
-        const response = await axios.get(url+ "api/food/list");
+        const response = await axios.get(url+ "/api/food/list");
         setFoodList(response.data.data);
      }
 
